@@ -18,12 +18,40 @@ Bonus:
 2- cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa)
 */
 
-console.log('vue ok', Vue)
-
 const app = new Vue({
+    name: 'ToStudyList',
     el: '#root',
     data: {
-
+        items: [
+            {
+                done: true,
+                text: 'ripassare arrow function'
+            },
+            {
+                done: false,
+                text: 'ripetere istanze documenti'
+            },
+            {
+                done: false,
+                text: 'refactoring esercizio carousel'
+            },
+            {
+                done: true,
+                text: 'ripassare for in, for of e forEach'
+            },
+            {
+                done: false,
+                text: 'aggiungere bonus esercizio PS5'
+            },
+            {
+                done: false,
+                text: 'fare simulazione in stile Risiko nell\'esercizio dei dadi'
+            },
+            {
+                done: true,
+                text: 'aggiungere bonus esercizio vue-slider'
+            },
+        ]
     },
     computed: {
 
