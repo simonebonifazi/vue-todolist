@@ -22,6 +22,7 @@ const app = new Vue({
     name: 'ToStudyList',
     el: '#root',
     data: {
+        newItem: '',
         items: [
             {
                 done: true,
@@ -58,7 +59,14 @@ const app = new Vue({
     },
     methods: {
         toDeleteItem(index) {
-            this.items.splice(index, 1)
+            this.items.splice(index, 1);
+        },
+        addNewItem() {
+
+            this.items.push(this.newItem)
+            this.items.done = (false)
+
+
         }
 
     }

@@ -33,8 +33,11 @@
                 <span v-else> {{item.text}} </span>
                 <i @click="toDeleteItem(i)" class="fa-solid fa-xmark"></i>
             </li>
-
         </ul>
+        <div class="input-group mt-3">
+            <input v-model="newItem" type="text" class="form-control" placeholder="Aggiungi qui un argomento ostico...">
+            <button @click="addNewItem" class="btn btn-outline-secondary" type="button"> <i class="fa-solid fa-plus"></i> Aggiungi</button>
+        </div>
 
     </div>
     <!-- JavaScript -->
