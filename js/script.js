@@ -57,6 +57,9 @@ const app = new Vue({
 
     },
     methods: {
+        toDeleteItem(index) {
+            this.items.splice(index, 1)
+        }
 
     }
 })

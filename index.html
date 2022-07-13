@@ -28,10 +28,10 @@
     </header>
     <div id="root" class="container">
         <ul class="list-group ">
-            <li v-for="item in items" class="list-group-item d-flex justify-content-between">
+            <li v-for="(item, i) in items" class="list-group-item d-flex justify-content-between">
                 <span v-if="item.done"> <del> {{item.text}} </del></span>
                 <span v-else> {{item.text}} </span>
-                <i class="fa-solid fa-xmark"></i>
+                <i @click="toDeleteItem(i)" class="fa-solid fa-xmark"></i>
             </li>
 
         </ul>
