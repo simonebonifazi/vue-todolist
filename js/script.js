@@ -24,6 +24,7 @@ const app = new Vue({
     data: {
         newItem: '',
         items: [
+
             {
                 done: true,
                 text: 'ripassare arrow function'
@@ -63,9 +64,8 @@ const app = new Vue({
         },
         addNewItem() {
 
-            this.items.push(this.newItem)
-            this.items.done = (false)
 
+            this.items.push({ text: this.newItem, done: false });
 
         }
 

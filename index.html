@@ -29,13 +29,13 @@
     <div id="root" class="container">
         <ul class="list-group ">
             <li v-for="(item, i) in items" class="list-group-item d-flex justify-content-between">
-                <span v-if="item.done"> <del> {{item.text}} </del></span>
-                <span v-else> {{item.text}} </span>
+                <div v-if="item.done"> <del> {{item.text}} </del></div>
+                <div v-else> {{item.text}} </div>
                 <i @click="toDeleteItem(i)" class="fa-solid fa-xmark"></i>
             </li>
         </ul>
         <div class="input-group mt-3">
-            <input v-model="newItem" type="text" class="form-control" placeholder="Aggiungi qui un argomento ostico...">
+            <input v-model.trim="newItem" @keyup.enter="addNewItem" type="text" class="form-control" placeholder="Aggiungi qui un argomento ostico...">
             <button @click="addNewItem" class="btn btn-outline-secondary" type="button"> <i class="fa-solid fa-plus"></i> Aggiungi</button>
         </div>
 
