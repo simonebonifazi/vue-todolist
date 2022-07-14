@@ -28,9 +28,9 @@
     </header>
     <div id="root" class="container">
         <ul class="list-group ">
-            <li v-for="(item, i) in items" class="list-group-item d-flex justify-content-between">
-                <div v-if="item.done"> <del> {{item.text}} </del></div>
-                <div v-else> {{item.text}} </div>
+            <li  v-for="(item, i) in items" class="list-group-item d-flex justify-content-between">
+                <div @click="toggleDone(i)" v-if="item.done"> <del> {{item.text}} </del></div>
+                <div @click="toggleDone(i)" v-else> {{item.text}} </div>
                 <i @click="toDeleteItem(i)" class="fa-solid fa-xmark"></i>
             </li>
         </ul>

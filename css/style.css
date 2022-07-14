@@ -3,3 +3,9 @@
     cursor: pointer;
     font-size: larger;
 }
+
+/* li's text */
+
+li>div {
+    cursor: pointer;
+}

@@ -64,10 +64,11 @@ const app = new Vue({
         },
         addNewItem() {
 
-
-            this.items.push({ text: this.newItem, done: false });
-
+            if (this.newItem) this.items.push({ text: this.newItem, done: false });
+            this.newItem = '';
+        },
+        toggleDone(index) {
+            this.items[index].done = !this.items[index].done
         }
-
     }
 })
